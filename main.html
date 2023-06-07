@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nail And Wood: A Game</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checklist.css">
 </head>
 <body>
   <div class="game">
@@ -49,6 +50,19 @@
           <td>Upgrades</td>
         </tr>
       </table>
+      <p>Built in checklist</p>
+      <div id="myDIV" class="header">
+        <h2>Checklist</h2>
+        <input type="text" id="myInput" placeholder="Add...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+
+      <ul id="myUL" style="list-style:none;">
+        <li>Make your first table by typing the letters into the input.</li>
+        <li>Make another one.</li>
+        <li>Sell your tables in the business tab.</li>
+        <li>Go to the business tab and order some supplies from the companies that sell nails and wood.</li>
+      </ul>
     </div>
     <div class="container">
       <div class="tabButtons">
@@ -88,16 +102,19 @@
         <i>The price is $1 for 5 nails and $2 for 10 nails.</i><br>
         <i>The price is $3 for 5 wood and $6 for 10 wood.</i>
         <br><br>
-        <button>Sell tables ($1)</button>
+        <button onclick="sell()">Sell tables ($1)</button>
       </div>
       <div class="tabContent4">
         <h2>Information</h2>
         <p>By File-Reader, an EF0601 studios creation</p>
         <iframe src="./help.html" frameborder="0" style="width: 100%; height:375px; background-color:white;"></iframe>
+        <br>
+        <button onclick="if(confirm('Are you sure you want to restart the game?') == true){location.reload();}">Restart</button>
       </div>
     </div>
   </div>
 </body>
 <script src="tabs.js"></script>
 <script src="main.js"></script>
+<script src="checklist.js"></script>
 </html>

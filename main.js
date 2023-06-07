@@ -3,6 +3,7 @@ let stats = {
   nails: 10,
   wood: 10,
   money: 50,
+  sellChance: 40,
 };
 
 let statsDis = {
@@ -87,6 +88,16 @@ function buyWood(amount) {
       break;
   }
   updateDis();
+}
+
+//sell
+function sell() {
+  if((Math.floor(Math.floor(Math.random() * 100) + 1) <= stats.sellChance)){
+    stats.money = stats.money + (2 * stats.tables);
+    stats.tables = 0;
+  }
+  updateDis();
+  stats.money--;
 }
 
 //on startup
