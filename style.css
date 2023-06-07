@@ -1,0 +1,73 @@
+*{
+  padding: none;
+  margin: none;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body{
+  background-color: black;
+  padding: 20px;
+  font-family: monospace;
+}
+.game{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  padding: 20px;
+}
+.container{
+  padding: 20px;
+  background-color: green;
+  color: white;
+}
+table{
+  border-spacing: 20px;
+  border: 3px solid greenyellow;
+  color: white;
+}
+.letters{
+  user-select: none;
+}
+.tableInput{
+  text-transform: uppercase;
+}
+.tabButtons{
+  display: flex;
+  justify-content: flex-start;
+  background-color: greenyellow;
+  padding: 10px;
+  padding-bottom: none;
+}
+.tabButtons button{
+  background-color: greenyellow;
+  border: none;
+  outline: none;
+  padding: 10px;
+  padding-bottom: none;
+}
+button:hover{
+  background-color:green;
+  color: white;
+}
+.tabContent1,
+.tabContent2{
+  background-color: green;
+  padding: 20px;
+  padding-top: none;
+  height: 500px;
+}
+.tabContent1 button,
+.tabContent2 button,
+.tabContent1 input,
+.tabContent2 input{
+  background-color: gainsboro;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-right: 5px;
+}
+.tabContent1 button:hover,
+.tabContent2 button:hover {
+  background-color: black;
+  color: white;
+}

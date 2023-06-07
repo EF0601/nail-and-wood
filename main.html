@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nail And Wood: A Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game">
+    <div class="container">
+      <h1>Nail And Wood: A Game</h1>
+      <p>Statistics goes here.</p>
+      <table>
+        <th>
+          <td>Data</td>
+          <td>Value</td>
+          <td>Category</td>
+        </th>
+        <tr>
+          <td></td>
+          <td>Nails</td>
+          <td class="nailsDis">10</td>
+          <td>Materials(Business)</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Wood</td>
+          <td class="woodDis">10</td>
+          <td>Materials(Business)</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Tables</td>
+          <td class="tableDis">0</td>
+          <td>General</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Money</td>
+          <td class="moneyDis">50</td>
+          <td>General</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Sale chance</td>
+          <td><span class="sale-chance">40</span>%</td>
+          <td>Upgrades</td>
+        </tr>
+      </table>
+    </div>
+    <div class="container">
+      <div class="tabButtons">
+        <button onclick="openTab(1)">Work Bench & Upgrades</button>
+        <button onclick="openTab(2)">Business</button>
+        <button>Automation (coming soon)</button>
+        <button onclick="openTab(4)">Info</button>
+      </div>
+      <div class="tabContent1" style="display: block;">
+        <h2>Workbench</h2>
+        <p>Type the letters shown into the workbench to create a table!</p>
+        <p class="letters"></p>
+        <input type="text" placeholder="workbench" minlength="5" maxlength="5" class="tableInput"><button onclick="buildTable()">Build</button>
+        <h2>Upgrades</h2>
+        <i>Coming soon</i>
+      </div>
+      <div class="tabContent2">
+        <h2>Business</h2>
+        <p>Manage relations and hire workers here.</p>
+        <table>
+          <th>
+            <td>Business</td>
+            <td>Actions</td>
+          </th>
+          <tr>
+            <td></td>
+            <td>Hot Iron Works</td>
+            <td><button onclick="buyNails(5)">Buy supplies (5 nails)</button><button onclick="buyNails(10)">Buy supplies (10 nails)</button></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Long Island Lumber</td>
+            <td><button onclick="buyWood(5)">Buy supplies (5 wood)</button><button onclick="buyWood(10)">Buy supplies (10 wood)</button></td>
+          </tr>
+        </table>
+        <br>
+        <i>The price is $1 for 5 nails and $2 for 10 nails.</i><br>
+        <i>The price is $3 for 5 wood and $6 for 10 wood.</i>
+        <br><br>
+        <button>Sell tables ($1)</button>
+      </div>
+      <div class="tabContent4">
+        <h2>Information</h2>
+        <p>By File-Reader, an EF0601 studios creation</p>
+        <iframe src="./help.html" frameborder="0" style="width: 100%; height:375px; background-color:white;"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="tabs.js"></script>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File-reader: nail and wood help</title>
+</head>
+
+<body>
+  <div id="navbar">
+    <div id="navbar">
+      <button>File-reader v1.1.0</button>
+      <button title="File last editted on Jun 7th">Nail and wood help</button>
+      <button onclick="sizePlus()">+</button>
+      <button class="size-display">15</button>
+      <button onclick="sizeMinus()">-</button>
+    </div>
+  </div>
+  <div class="content">
+    <h1>Information:</h1>
+    <p>Welcome! This help page is being edited constantly, so make sure to come back every so often.</p><br><br>
+    <h2>Getting Started</h2>
+    <p>The basic concepts of this game are centered around the workbench. Simply type the letters into the input to make a table. Replenish your stock to built tables in the business section. Your beginner's todo list is: <br>
+    <ul style="list-style-type: none;">
+      <li><input type="checkbox" name="" id=""> Make your first table by typing the letters into the input.</li>
+      <li><input type="checkbox" name="" id=""> Make another one.</li>
+      <li><input type="checkbox" name="" id=""> Sell your tables in the business tab.</li>
+      <li><input type="checkbox" name="" id=""> Go to the business tab and order some supplies from the companies that sell nails and wood.</li>
+
+    </ul><br>
+    <img src="businessScreenshot.png" alt="business tab UI">
+    <i>The business tab UI.</i>
+    <br>
+    <img src="tableBuilding.png" alt="table building UI">
+    <i>The table building UI.</i>
+    </p>
+    <br><br>
+    <h2>Basics:</h2>
+    <p>In this game, buy materials in the "business" section. Use the materials to make tables. Use upgrades to make
+      sure tables are sold. Tables can be attempted to be sold in the business section. There is a default sale chance
+      of 40%. Don't worry, you can repeat the process multiple times at the cost of $1 each time.</p><br>
+    <h2>Credits</h2>
+    <p>Thanks to EF0601, the main director and coder. Thanks to Guuuuest0001 for coding other parts and coming up with
+      the idea.</p>
+  </div>
+
+</body>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Style the navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: monospace;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  /* Navbar links */
+  #navbar button {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    background-color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border: none;
+    font-family: monospace;
+  }
+
+  #navbar button:hover {
+    background-color: yellowgreen;
+    color: black;
+  }
+
+  /* Page content */
+  .content {
+    padding: 16px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky+.content {
+    padding-top: 60px;
+  }
+</style>
+<script>
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () { myFunction() };
+
+  // Get the navbar
+  var navbar = document.getElementById("navbar");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  let fontsize = 18;
+
+  function updateSize() {
+    if (fontsize >= 2 && fontsize <= 52) {
+      document.querySelector('body').style.fontSize = String(fontsize) + "px";
+      document.querySelector('.size-display').textContent = String(fontsize) + "px";
+    }
+  }
+  function sizePlus() {
+    fontsize++;
+    updateSize();
+  }
+  function sizeMinus() {
+    fontsize--;
+    updateSize();
+  }
+
+
+  updateSize();
+</script>
+
+</html>
