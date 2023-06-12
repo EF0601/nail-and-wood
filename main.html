@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="checklist.css">
 </head>
+
 <body>
   <div class="game">
     <div class="container">
@@ -15,9 +17,9 @@
       <p>Statistics goes here.</p>
       <table>
         <th>
-          <td>Data</td>
-          <td>Value</td>
-          <td>Category</td>
+        <td>Data</td>
+        <td>Value</td>
+        <td>Category</td>
         </th>
         <tr>
           <td></td>
@@ -46,8 +48,14 @@
         <tr>
           <td></td>
           <td>Sale chance</td>
-          <td><span class="sale-chance">40</span>%</td>
-          <td>Upgrades</td>
+          <td><span class="saleChanceDis">40</span>%</td>
+          <td>General/Upgrades</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Table value</td>
+          <td>$<span class="tableValueDis">2</span></td>
+          <td>General/Upgrades</td>
         </tr>
       </table>
       <p>Built in checklist</p>
@@ -62,6 +70,7 @@
         <li>Make another one.</li>
         <li>Sell your tables in the business tab.</li>
         <li>Go to the business tab and order some supplies from the companies that sell nails and wood.</li>
+        <li>Invest in upgrades</li>
       </ul>
     </div>
     <div class="container">
@@ -75,27 +84,56 @@
         <h2>Workbench</h2>
         <p>Type the letters shown into the workbench to create a table!</p>
         <p class="letters"></p>
-        <input type="text" placeholder="workbench" minlength="5" maxlength="5" class="tableInput"><button onclick="buildTable()">Build</button>
+        <input type="text" placeholder="workbench" minlength="5" maxlength="5" class="tableInput"><button
+          onclick="buildTable()">Build</button>
         <h2>Upgrades</h2>
-        <i>Coming soon</i>
+        <div class="upgrade">
+          <div class="cool">
+            <h3>Online Ads</h3>
+          </div>
+
+          <p class="upgradeContent">Increases your reach to potential customers so higher probability someone is going to buy from you. 5
+            levels. Boosts the probability by 8% each time. Compound. Cost increases by 5% each time.
+            <br>
+          <div class="cool">
+            <button class="upgradeBtn" onclick="upgradeItem('ads')">Upgrade ($<span class="adPrice">30</span>)</button>
+          </div>
+
+          </p>
+        </div>
+        <div class="upgrade">
+          <div class="cool">
+            <h3>Quality Control</h3>
+          </div>
+
+          <p class="upgradeContent">Increases the quality of the product, thus the probability of a sale will be increased slightly and the price will be increased dramatically. 5 levels. Boosts the price by 80% each time and sale probability by 3% each time. Compound. Cost increases by 8% each time.
+            <br>
+          <div class="cool">
+            <button class="upgradeBtn" onclick="upgradeItem('quality')">Upgrade ($<span class="qualityPrice">80</span>)</button>
+          </div>
+
+          </p>
+        </div>
       </div>
       <div class="tabContent2">
         <h2>Business</h2>
         <p>Manage relations and hire workers here.</p>
         <table>
           <th>
-            <td>Business</td>
-            <td>Actions</td>
+          <td>Business</td>
+          <td>Actions</td>
           </th>
           <tr>
             <td></td>
             <td>Hot Iron Works</td>
-            <td><button onclick="buyNails(5)">Buy supplies (5 nails)</button><button onclick="buyNails(10)">Buy supplies (10 nails)</button></td>
+            <td><button onclick="buyNails(5)">Buy supplies (5 nails)</button><button onclick="buyNails(10)">Buy supplies
+                (10 nails)</button></td>
           </tr>
           <tr>
             <td></td>
             <td>Long Island Lumber</td>
-            <td><button onclick="buyWood(5)">Buy supplies (5 wood)</button><button onclick="buyWood(10)">Buy supplies (10 wood)</button></td>
+            <td><button onclick="buyWood(5)">Buy supplies (5 wood)</button><button onclick="buyWood(10)">Buy supplies
+                (10 wood)</button></td>
           </tr>
         </table>
         <br>
@@ -107,10 +145,11 @@
       <div class="tabContent4">
         <h2>Information</h2>
         <p>By File-Reader, an EF0601 studios creation</p>
-        <iframe src="./help.html" frameborder="0" style="width: 100%; height:375px; background-color:white;"></iframe>
+        <iframe src="./help.html" frameborder="0" style="width: 100%; height:575px; background-color:white;"></iframe>
         <br>
         <i>Not loading? Click here: <a href="./help.html" style="color:blue;" target="_blank">help.html</a></i><br>
-        <button onclick="if(confirm('Are you sure you want to restart the game?') == true){location.reload();}">Restart</button>
+        <button
+          onclick="if(confirm('Are you sure you want to restart the game?') == true){location.reload();}">Restart</button>
       </div>
     </div>
   </div>
@@ -118,4 +157,5 @@
 <script src="tabs.js"></script>
 <script src="main.js"></script>
 <script src="checklist.js"></script>
+
 </html>
