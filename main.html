@@ -48,8 +48,14 @@
         <tr>
           <td></td>
           <td>Sale chance</td>
-          <td><span class="sale-chance">40</span>%</td>
-          <td>Upgrades</td>
+          <td><span class="saleChanceDis">40</span>%</td>
+          <td>General/Upgrades</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Table value</td>
+          <td>$<span class="tableValueDis">2</span></td>
+          <td>General/Upgrades</td>
         </tr>
       </table>
       <p>Built in checklist</p>
@@ -90,7 +96,7 @@
             levels. Boosts the probability by 8% each time. Compound. Cost increases by 5% each time.
             <br>
           <div class="cool">
-            <button class="upgradeBtn">Upgrade (<span class="adPrice">$30</span>)</button>
+            <button class="upgradeBtn" onclick="upgradeItem('ads')">Upgrade ($<span class="adPrice">30</span>)</button>
           </div>
 
           </p>
@@ -100,10 +106,10 @@
             <h3>Quality Control</h3>
           </div>
 
-          <p class="upgradeContent">Increases the quality of the product, thus the probability of a sale will be increased slightly and the price will be increased dramatically. 5 levels. Boosts the price by 10% each time and sale probability by 3% each time. Compound. Cost increases by 8% each time.
+          <p class="upgradeContent">Increases the quality of the product, thus the probability of a sale will be increased slightly and the price will be increased dramatically. 5 levels. Boosts the price by 80% each time and sale probability by 3% each time. Compound. Cost increases by 8% each time.
             <br>
           <div class="cool">
-            <button class="upgradeBtn">Upgrade (<span class="adPrice">$80</span>)</button>
+            <button class="upgradeBtn" onclick="upgradeItem('quality')">Upgrade ($<span class="qualityPrice">80</span>)</button>
           </div>
 
           </p>
