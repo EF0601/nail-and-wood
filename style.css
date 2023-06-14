@@ -71,3 +71,35 @@ button:hover{
   background-color: black;
   color: white;
 }
+#myProgress {
+  width: 75%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: orange;
+}
+
+#myProgress2 {
+  width: 75%;
+  background-color: grey;
+}
+
+#myBar2 {
+  width: 1%;
+  height: 30px;
+  background-color: blue;
+}
+
+#myProgress3 {
+  width: 75%;
+  background-color: grey;
+}
+
+#myBar3 {
+  width: 1%;
+  height: 30px;
+  background-color: yellow;
+}
